@@ -4,6 +4,7 @@ import { FormsModule } from '@angular/forms';
 import { AppComponent } from './app.component';
 import { ContactListComponent } from './contact-list.component';
 import { EditContactComponent } from './edit-contact.component';
+import { NewContactComponent } from './new-contact.component';
 
 @NgModule({
   imports:[ BrowserModule,
@@ -11,7 +12,8 @@ import { EditContactComponent } from './edit-contact.component';
           ],
   declarations: [ AppComponent,
                   ContactListComponent,
-                  EditContactComponent],
+                  EditContactComponent,
+                  NewContactComponent],
   bootstrap: [ AppComponent ]
 })
 

@@ -6,8 +6,11 @@ import { Contact } from './contact.model';
   template: `
   <div class='container'>
     <h1>AddressBook</h1>
+    <hr>
     <contact-list [childContactList]='masterContactList' (clickSender)='editContact($event)'></contact-list>
     <edit-contact [childSelectedContact]='selectedContact' (doneButtonClickedSender)='finishedEditing()'></edit-contact>
+    <hr>
+    <new-contact (newContactSender)='addNewContact($event)'></new-contact>
   </div>
   `
 })
@@ -29,5 +32,9 @@ export class AppComponent {
 
   finishedEditing() {
     this.selectedContact = null;
+  }
+
+  addNewContact(newContact: Contact) {
+    this.masterContactList.push(newContact);
   }
 }
